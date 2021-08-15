@@ -11,8 +11,8 @@
     <div class='col-md-8 offset-md-1'>
       <h2>Books</h2>　
       <%= render 'books/index', books: @books %>
-      <h2>投稿数</h2>
-      <%= render 'books/count' %>
+      <h3>7日間分の投稿数</h3>
+      <%= render 'books/1w', books: @books %>
     </div>
   </div>
 </div>

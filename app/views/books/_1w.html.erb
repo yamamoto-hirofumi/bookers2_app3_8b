@@ -1,0 +1,25 @@
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th scope="col">６日前</th>
+      <th scope="col">５日前</th>
+      <th scope="col">４日前</th>
+      <th scope="col">３日前</th>
+      <th scope="col">２日前</th>
+      <th scope="col">１日前</th>
+      <th scope="col">今日</th>
+         
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><%= current_user.books.where(created_at: 6.day.ago.all_day).count %></td>
+      <td><%= current_user.books.where(created_at: 5.day.ago.all_day).count %></td>
+      <td><%= current_user.books.where(created_at: 4.day.ago.all_day).count %></td>
+      <td><%= current_user.books.where(created_at: 3.day.ago.all_day).count %></td>
+      <td><%= current_user.books.where(created_at: 2.day.ago.all_day).count %></td>
+      <td><%= current_user.books.where(created_at: 1.day.ago.all_day).count %></td>
+      <td><%= current_user.books.where(created_at: Time.zone.now.all_day).count %></td>
+    </tr>
+  </tbody>
+</table>
